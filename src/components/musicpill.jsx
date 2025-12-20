@@ -9,7 +9,7 @@ export default function MusicPill() {
     const textRef = useRef(null);
 
     // Toggle to false when ready for real API
-    const isMock = true;
+    const isMock = false;
 
     useEffect(() => {
         if (isMock) {
