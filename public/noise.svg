@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="200">
+  <filter id="graySpeckleNoise">
+    <!-- Step 1: Generate noise -->
+    <feTurbulence type="fractalNoise" baseFrequency="2.6" numOctaves="4" stitchTiles="stitch" result="turb"/>
+
+    <!-- Step 2: Force grayscale -->
+    <feColorMatrix
+      in="turb"
+      type="matrix"
+      values="
+        0.33 0.33 0.33 0 0
+        0.33 0.33 0.33 0 0
+        0.33 0.33 0.33 0 0
+        0    0    0    1 0"
+      result="gray"
+    />
+
+    <!-- Step 3: Map grayscale into alpha only -->
+    <feColorMatrix
+      in="gray"
+      type="matrix"
+      values="
+        0 0 0 0 0
+        0 0 0 0 0
+        0 0 0 0 0
+        -1 -1 -1 1 1"
+      result="alphaMask"
+    />
+
+    <!-- Step 4: Apply the alpha mask to a chosen color -->
+    <feFlood flood-color="#626262" result="grayColor"/>
+    <feComposite in="grayColor" in2="alphaMask" operator="in" result="finalNoise"/>
+  </filter>
+
+  <!-- Render -->
+  <rect width="100%" height="100%" filter="url(#graySpeckleNoise)" />
+</svg>
+
