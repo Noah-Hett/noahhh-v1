@@ -5,8 +5,8 @@ import SkillTag from "../components/skillTag";
 import ResponsiveVideo from "../components/responsiveVideo";
 
 import BuskRadioHero from "../assets/BuskRadioHero.png";
-import BuskRadio3 from "../assets/buskRadio3.png";
-import BuskRadio2 from "../assets/buskRadio2.png";
+import BuskRadio3 from "../assets/buskradio3.png";
+import BuskRadio2 from "../assets/buskradio2.png";
 
 export default function BuskRadio() {
     return (
