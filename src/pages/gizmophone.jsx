@@ -4,7 +4,7 @@ import ProfileTag from "../components/profileTag";
 import SkillTag from "../components/skillTag";
 import ResponsiveVideo from "../components/responsiveVideo";
 
-import GizmophoneHero from "../assets/gizmophoneHero.jpeg";
+import GizmophoneHero from "../assets/GizmophoneHero.jpeg";
 import Gizmophone2 from "../assets/gizmophone2.jpeg";
 import Gizmophone3 from "../assets/gizmophone3.jpeg";
 
