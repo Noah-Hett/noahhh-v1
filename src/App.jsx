@@ -5,7 +5,7 @@ import { PageTransitionProvider } from './animations/circlePageTransition';
 import Navbar from "./components/navbar";
 import Home from "./pages/Home";
 import Gizmophone from "./pages/gizmophone";
-import BuskRadio from "./pages/buskRadio";
+import BuskRadio from "./pages/buskradio";
 import SmoothScrollLayout from "./components/smoothScrollLayout";
 import CustomCursor from "./components/CustomCursor";
 import Personal from "./pages/personal";
