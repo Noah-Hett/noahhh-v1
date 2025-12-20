@@ -72,7 +72,7 @@ export default function ICRS() {
                     />
 
                     <a
-                        href="/gizmophonePDF.pdf"
+                        href="/icrs.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full py-2 flex items-center justify-center gap-2 bg-white dark:bg-black border-2 border-black dark:border-white text-black dark:text-white font-synemono text-xs hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
