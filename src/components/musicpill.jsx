@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Disc3 } from "lucide-react";
 
-export default function SpotifyPill() {
+export default function MusicPill() {
     const [data, setData] = useState(null);
     const [isOverflowing, setIsOverflowing] = useState(false);
 
