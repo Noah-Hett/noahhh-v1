@@ -1,8 +1,6 @@
 import AboutPersonal from "../components/aboutpersonal";
 import Contact from "../components/contact";
-import WorkSection from "../components/workSection";
 import PersonalGrid from "../components/personalGrid";
-import ProfileTag from "../components/profileTag";
 
 function Personal({ isDarkMode }) {
     return (

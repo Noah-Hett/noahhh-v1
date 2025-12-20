@@ -31,7 +31,7 @@ export default function About({ isDarkMode }) {
 
             {/* Spotify Display */}
             <div className="absolute right-[4vw] top-[50vh] z-20 rotate-[4deg]">
-                <MusicPill isMock={true} />
+                <MusicPill isMock={false} />
             </div>
 
             <NavButton
