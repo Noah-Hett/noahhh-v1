@@ -8,7 +8,7 @@ export async function onRequest(context) {
     const basic = btoa(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`);
     const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
     const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
-    const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played?limit=1`;
+    const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played`;
 
     // 1. Get Access Token
     const response = await fetch(TOKEN_ENDPOINT, {
