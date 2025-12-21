@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Linkedin, Github, Mail, Instagram, Check } from 'lucide-react';
+import { Linkedin, Github, Mail, Instagram, Check, Send, Loader2 } from 'lucide-react';
 import useContactExpand from "../animations/useContactExpand";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,6 +10,15 @@ function Contact() {
   const sectionRef = useRef(null);
   const maskRef = useRef(null);
   const [emailCopied, setEmailCopied] = useState(false);
+
+  // Form state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleEmailClick = async () => {
     try {
@@ -21,15 +30,62 @@ function Contact() {
     }
   };
 
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    setSubmitStatus(null);
+  };
+
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const isFormValid = () => {
+    return formData.name.trim() &&
+      formData.email.trim() &&
+      isValidEmail(formData.email) &&
+      formData.message.trim();
+  };
+
+  const handleSubmit = async () => {
+    if (!isFormValid() || isSubmitting) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Failed to submit form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   useEffect(() => {
     const mask = maskRef.current;
     const section = sectionRef.current;
 
-    // Check if navigating directly to #contact
     const isDirectNavigation = window.location.hash === '#contact';
 
     const animation = gsap.fromTo(mask,
-      { scaleY: isDirectNavigation ? 0 : 1 }, // Start revealed if direct navigation
+      { scaleY: isDirectNavigation ? 0 : 1 },
       {
         scaleY: 0,
         transformOrigin: "top",
@@ -43,7 +99,6 @@ function Contact() {
       }
     );
 
-    // If directly navigating to contact, ensure ScrollTrigger refreshes
     if (isDirectNavigation) {
       const timer = setTimeout(() => {
         ScrollTrigger.refresh();
@@ -149,10 +204,61 @@ function Contact() {
               <div className="flex flex-col gap-8 md:gap-16 w-full">
                 <h2 className="text-2xl">REACH OUT</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <InputField label="NAME" type="text" />
-                  <InputField label="EMAIL" type="email" />
+                  <InputField
+                    label="NAME"
+                    type="text"
+                    value={formData.name}
+                    onChange={(e) => handleInputChange('name', e.target.value)}
+                  />
+                  <InputField
+                    label="EMAIL"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => handleInputChange('email', e.target.value)}
+                  />
                 </div>
-                <InputField label="MESSAGE" type="text" fullWidth />
+                <InputField
+                  label="MESSAGE"
+                  type="text"
+                  fullWidth
+                  value={formData.message}
+                  onChange={(e) => handleInputChange('message', e.target.value)}
+                />
+
+                {/* Submit Button */}
+                {isFormValid() && (
+                  <div className="flex flex-col gap-2">
+                    <button
+                      onClick={handleSubmit}
+                      disabled={isSubmitting}
+                      className="w-full md:w-auto px-8 py-3 bg-neutral-300 text-neutral-700 hover:bg-neutral-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 font-medium"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 size={18} className="animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send size={18} />
+                          Send Message
+                        </>
+                      )}
+                    </button>
+
+                    {submitStatus === 'success' && (
+                      <p className="text-green-400 text-sm flex items-center gap-2">
+                        <Check size={16} />
+                        Message sent successfully!
+                      </p>
+                    )}
+                    {submitStatus === 'error' && (
+                      <p className="text-red-400 text-sm">
+                        Failed to send message. Please try again or email directly.
+                      </p>
+                    )}
+                  </div>
+                )}
               </div>
 
             </div>
@@ -176,7 +282,7 @@ function Contact() {
   );
 }
 
-function InputField({ label, type, fullWidth }) {
+function InputField({ label, type, fullWidth, value, onChange }) {
   const fieldRef = useRef(null);
   useContactExpand(fieldRef);
 
@@ -191,6 +297,8 @@ function InputField({ label, type, fullWidth }) {
       </span>
       <input
         type={type}
+        value={value}
+        onChange={onChange}
         className="
           w-full h-10
           bg-transparent 
