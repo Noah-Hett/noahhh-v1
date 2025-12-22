@@ -17,10 +17,10 @@ function WorkSection({ columns = 1 }) {
           image={GizmophoneHero}
           descriptionItalic="'Rhythm as Rotation'"
           descriptionRegular="Motion and colour based drum machine designed to challenge traditional musical notation."
-          hoverColor="green"
+          hoverColor="#3585FD"
           projectUrl="/gizmophone"
           tags={[
-            { text: "Interaction Design", color: "text-green-700 dark:text-green-400" },
+            { text: "Interaction Design", color: "text-[#3585FD] dark:text-blue-400" },
             { text: "Mechatronics", color: "text-black dark:text-white" },
             { text: "C++", color: "text-black dark:text-white" },
           ]}
@@ -34,10 +34,10 @@ function WorkSection({ columns = 1 }) {
           badgeUrl="https://www.imperial.ac.uk/design-engineering/study/meng/student-prizes/desire-awards/"
           descriptionItalic="'On Air, Anywhere'"
           descriptionRegular="Live music streaming and digital donation service and interface for buskers."
-          hoverColor="pink"
+          hoverColor="#FC4E6D"
           projectUrl="/buskradio"
           tags={[
-            { text: "UI/UX Design", color: "text-pink-600 dark:text-pink-400" },
+            { text: "UI/UX Design", color: "text-[#FC4E6D] dark:text-[#FC4E6D]" },
             { text: "User Research", color: "text-black dark:text-white" },
             { text: "Figma", color: "text-black dark:text-white" },
           ]}
@@ -52,7 +52,7 @@ function WorkSection({ columns = 1 }) {
           hoverColor="blue"
           projectUrl="/icrs"
           tags={[
-            { text: "Branding Design", color: "text-blue-700 dark:text-blue-400" },
+            { text: "Branding Design", color: "text-blue-700 dark:text-[#F2FF00]" },
             { text: "Social Media", color: "text-black dark:text-white" },
             { text: "Publicity", color: "text-black dark:text-white" },
           ]}

@@ -16,10 +16,10 @@ function WorkGrid({ columns = 1 }) {
                 titleFont="font-synemono"
                 image={GizmophoneHero}
                 descriptionItalic="'Rhythm as Rotation'"
-                hoverColor="green"
+                hoverColor="#3585FD"
                 projectUrl="/gizmophone"
                 tags={[
-                    { text: "Interaction Design", color: "text-green-700 dark:text-green-400" }
+                    { text: "Interaction Design", color: "text-[#3585FD] dark:text-blue-400" }
                 ]}
             />
 
@@ -30,10 +30,10 @@ function WorkGrid({ columns = 1 }) {
                 badge={DesireBadge}
                 badgeUrl="https://www.imperial.ac.uk/design-engineering/study/meng/student-prizes/desire-awards/"
                 descriptionItalic="'On Air, Anywhere'"
-                hoverColor="pink"
+                hoverColor="#FC4E6D"
                 projectUrl="/buskradio"
                 tags={[
-                    { text: "UI/UX Design", color: "text-pink-600 dark:text-pink-400" }
+                    { text: "UI/UX Design", color: "text-[#FC4E6D] dark:text-[#FC4E6D]" }
                 ]}
             />
 
@@ -45,7 +45,7 @@ function WorkGrid({ columns = 1 }) {
                 hoverColor="blue"
                 projectUrl="/icrs"
                 tags={[
-                    { text: "Branding Design", color: "text-blue-700 dark:text-blue-400" }
+                    { text: "Branding Design", color: "text-blue-700 dark:text-[#F2FF00]" }
                 ]}
             />
 
@@ -66,10 +66,10 @@ function WorkGrid({ columns = 1 }) {
                 titleFont="font-bold"
                 image={bisoleHero}
                 descriptionItalic="'Flippaple' Footwear"
-                hoverColor="orange"
+                hoverColor="#FF8505"
                 projectUrl="/bisole"
                 tags={[
-                    { text: "Product Design", color: "text-orange-700 dark:text-orange-400" }
+                    { text: "Product Design", color: "text-[#FF8505] dark:text-[#FF8505]" }
                 ]}
             />
 
@@ -77,11 +77,11 @@ function WorkGrid({ columns = 1 }) {
                 title={<span className="font-light"><b>S</b>DE</span>}
                 titleFont="font-bold"
                 image={sdeHero}
-                descriptionItalic="Sustainable Airline Seating"
+                descriptionItalic="Sustainable Design Engineering - Airline Seating"
                 hoverColor="red"
                 projectUrl="/sde"
                 tags={[
-                    { text: "Systems Design", color: "text-red-600 dark:text-red-400" }
+                    { text: "Systems Design", color: "text-red-600 dark:text-red-500" }
                 ]}
             />
 
@@ -89,10 +89,10 @@ function WorkGrid({ columns = 1 }) {
                 title="Makeathon"
                 titleFont="font-martiusitalic"
                 image={makeathonHero}
-                descriptionItalic="Sustainable Airline Seating"
+                descriptionItalic="Logo, Branding for 'Makeathon' Hackathon"
                 projectUrl="/makeathon"
                 tags={[
-                    { text: "Branding Design", color: "text-blue-700 dark:text-blue-400" }
+                    { text: "Branding Design", color: "text-blue-700 dark:text-[#F2FF00]" }
                 ]}
             />
 

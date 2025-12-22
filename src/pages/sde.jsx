@@ -34,9 +34,9 @@ export default function SDE() {
 
                         {/* Skill Tags Row */}
                         <div className="flex flex-wrap gap-2">
-                            <SkillTag text="Product Design" color="text-orange-700 dark:text-orange-400" />
-                            <SkillTag text="Social Media" color="text-black dark:text-white" />
-                            <SkillTag text="Publicity" color="text-black dark:text-white" />
+                            <SkillTag text="Systems Design" color="text-red-600 dark:text-red-500" />
+                            <SkillTag text="Fusion 360" color="text-black dark:text-white" />
+                            <SkillTag text="Eco Audit" color="text-black dark:text-white" />
                         </div>
                     </div>
 
@@ -49,10 +49,10 @@ export default function SDE() {
 
                         <div className="prose dark:prose-invert max-w-none">
                             <p className="text-sm text-neutral-800 dark:text-neutral-200">
-                                The Gizmophone is an instrument designed to challenge traditional music theory by implementing a rotating face as a primary interaction.
+                                SDE: Sustainable Design Engineering. The brief: Sustainable Airline Seating Systems.
                             </p>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                Instead of using musical bars, we use rhythmic rotations, with colour representing pitch and timbre. Our musical rests and tempo are controlled by the clock hand (or light) which we rotate ourselves.
+                                The main challenge of this projects was finding solutions in a heavily constrained and regulated industry. By focussing on the hands-on uses: Passengers, Cabin Cleaners and Flight Attendants, I aimed to find solutions that would not only tackle the environmental impact, but improve the social sustainability of the people most core to commercial aviation.
                             </p>
                         </div>
                     </main>

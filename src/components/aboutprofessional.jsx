@@ -24,7 +24,7 @@ export default function About({ isDarkMode }) {
                 <div className="flex flex-col gap-1">
                     <p className="font-sans text-base md:text-2xl font-light text-black dark:text-white leading-tight">
                         <ImperialLogo className="inline-block h-[0.65em] w-auto mr-3 mb-1 fill-current" />
-                        Design Engineer sharpening my skills in all kinds of creative work.
+                        Design Engineer, sharpening my skills in all kinds of creative work.
                     </p>
                 </div>
 
@@ -70,7 +70,7 @@ export default function About({ isDarkMode }) {
                     </a>
 
                     <a
-                        href="/path-to-portfolio.pdf"
+                        href="/Noah Hett - portfolio.pdf"
                         download
                         className="group flex items-center justify-center rounded-full bg-black px-5 py-2.5 font-geist text-base md:text-2xl font-medium text-white ring-2 ring-inset ring-neutral-400 transition-all duration-500 hover:bg-white hover:text-black hover:ring-black dark:bg-white dark:text-black dark:ring-neutral-500 dark:hover:bg-black dark:hover:text-white dark:hover:ring-white"
                     >

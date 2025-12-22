@@ -39,7 +39,7 @@ export default function ICRS() {
 
                         {/* Skill Tags Row */}
                         <div className="flex flex-wrap gap-2">
-                            <SkillTag text="Branding Design" color="text-blue-700 dark:text-blue-400" />
+                            <SkillTag text="Branding Design" color="text-blue-700 dark:text-[#F2FF00]" />
                             <SkillTag text="Social Media" color="text-black dark:text-white" />
                             <SkillTag text="Publicity" color="text-black dark:text-white" />
                         </div>
@@ -54,10 +54,10 @@ export default function ICRS() {
 
                         <div className="prose dark:prose-invert max-w-none">
                             <p className="text-sm text-neutral-800 dark:text-neutral-200">
-                                The Gizmophone is an instrument designed to challenge traditional music theory by implementing a rotating face as a primary interaction.
+                                Imperial College Robotics Society (ICRS) is one of the largest student-run societies at Imperial. I became publicity officer for the start of the 2025/2026 year, and decided to that a full refresh of the brand identity was would be a good way to start.
                             </p>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                Instead of using musical bars, we use rhythmic rotations, with colour representing pitch and timbre. Our musical rests and tempo are controlled by the clock hand (or light) which we rotate ourselves.
+                                The main goals of the project were to make the society more recognisable and suited for digital communication, while not compromising on the fun and student run feel. <br /> This rebrand included edits to the logo, a new colour palette, typeface and set graphic style. I also created a new set of assets that could be used across both social media and print media. <br /> Since the rebrand, I have also been responsible for the publicity of the society, which has included posters and advertisements for events and activities (below) and social media posts on <a href="https://www.instagram.com/icrobotics" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:font-semibold duration-300">instagram</a>.
                             </p>
                         </div>
                     </main>

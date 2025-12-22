@@ -2,10 +2,12 @@
 import { Link } from "react-router-dom";
 import ProfileTag from "../components/profileTag";
 import SkillTag from "../components/skillTag";
+import ResponsiveVideo from "../components/responsiveVideo";
 
 import NOAHHH1 from "../assets/noahhhcom1.png";
-// import NOAHHH2 from "../assets/noahhh2.png";
-// import NOAHHH3 from "../assets/noahhh3.png";
+import noahhhcomhero from "../assets/noahhhcomHero.png";
+import NOAHHH2 from "../assets/noahhhcom2.png";
+
 
 export default function Noahhh() {
     return (
@@ -44,22 +46,26 @@ export default function Noahhh() {
                     <main className="flex flex-col gap-6 mt-4">
                         <div className="prose dark:prose-invert max-w-none">
                             <p className="text-sm text-neutral-800 dark:text-neutral-200">
-                                A personal portfolio website built with React, Tailwind CSS, and GSAP.
-                            </p>
-                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                Built with React, Tailwind CSS, and GSAP.
+                                You're looking at it, my portfolio website built with React, Tailwind CSS, and GSAP.
                             </p>
                         </div>
-                        <img
-                            src={NOAHHH1}
-                            alt=""
-                            className="w-full h-auto" />
+                        <ResponsiveVideo
+                            src="/noahhhcom.mp4"
+                            muted={true}
+                            autoPlay={true}
+                            loop={false}
+                            className="w-full h-auto"
+
+                        />
+
                         <div className="prose dark:prose-invert max-w-none">
-                            <p className="text-sm text-neutral-800 dark:text-neutral-200">
-                                The Gizmophone is an instrument designed to challenge traditional music theory by implementing a rotating face as a primary interaction.
-                            </p>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                Instead of using musical bars, we use rhythmic rotations, with colour representing pitch and timbre. Our musical rests and tempo are controlled by the clock hand (or light) which we rotate ourselves.
+                                My first web project, and introduction to using both conventional HTML and CSS, as well as the power of React and Tailwind. Working on this site has been a great way to dive in to web development and has let me explore loads of different tools such as GSAP, which I used across the site for animation.
+                                <br />
+                                <br /> The site uses a 3 page structure: PROFESSIONAL, HOME, and PERSONAL. This is something I prototyped early, it allows me to seperate my work, and hopefully target different users. It also provided a fun development challenge and the integration of the spinning navigation buttons is something I'm really happy with.
+                                <br />
+                                <br /> The pages were fully designed and prototyped in Figma before I moved to code. Leveraging react, many of the work and about sections are repeatable and easy to update when I need to make changes.
+
                             </p>
                         </div>
 
@@ -70,8 +76,8 @@ export default function Noahhh() {
                 {/* FULL WIDTH BOTTOM ROW: Image Grid | Order 3 (Desktop) / Order 2 (Mobile) */}
                 <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4 pb-20 order-2 md:order-3">
                     <img src={NOAHHH1} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800" />
-                    {/* <img src={NOAHHH2} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800" />
-                    <img src={NOAHHH3} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800" /> */}
+                    <img src={noahhhcomhero} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800" />
+                    <img src={NOAHHH2} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800" />
                 </div>
 
                 {/* COPYRIGHT / COPY TEXT SECTION */}

@@ -33,9 +33,9 @@ export default function Bisole() {
 
                         {/* Skill Tags Row */}
                         <div className="flex flex-wrap gap-2">
-                            <SkillTag text="Product Design" color="text-orange-700 dark:text-orange-400" />
-                            <SkillTag text="Social Media" color="text-black dark:text-white" />
-                            <SkillTag text="Publicity" color="text-black dark:text-white" />
+                            <SkillTag text="Product Design" color="text-[#FF8505]" />
+                            <SkillTag text="Adobe Indesign" color="text-black dark:text-white" />
+                            <SkillTag text="Procreate" color="text-black dark:text-white" />
                         </div>
                     </div>
 
@@ -48,10 +48,11 @@ export default function Bisole() {
 
                         <div className="prose dark:prose-invert max-w-none">
                             <p className="text-sm text-neutral-800 dark:text-neutral-200">
-                                The Gizmophone is an instrument designed to challenge traditional music theory by implementing a rotating face as a primary interaction.
+                                BiSole is an adaptable footwear concept for trail running. It provides
+                                2 different tread patterns to enhance user performance and reduce risk of injury.
                             </p>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                Instead of using musical bars, we use rhythmic rotations, with colour representing pitch and timbre. Our musical rests and tempo are controlled by the clock hand (or light) which we rotate ourselves.
+                                Tasked with the brief 'Footwear' in my first term of university, I created this concept to combat 6+ pairs of shoes that are 'recommended' within the trail running community.
                             </p>
                         </div>
                     </main>

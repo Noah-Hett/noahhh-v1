@@ -35,7 +35,7 @@ export default function Gizmophone() {
 
                         {/* Skill Tags Row */}
                         <div className="flex flex-wrap gap-2">
-                            <SkillTag text="Interaction Design" color="text-blue-700 dark:text-blue-400" />
+                            <SkillTag text="Interaction Design" color="text-[#3585FD] dark:text-blue-400" />
                             <SkillTag text="Mechatronics" color="text-black dark:text-white" />
                             <SkillTag text="C++" color="text-black dark:text-white" />
                         </div>
@@ -57,6 +57,23 @@ export default function Gizmophone() {
                             </p>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">
                                 Instead of using musical bars, we use rhythmic rotations, with colour representing pitch and timbre. Our musical rests and tempo are controlled by the clock hand (or light) which we rotate ourselves.
+                                It creates a more fluid musical
+                                experience which relies on visual,
+                                and spacial awareness, as well as
+                                pattern recognition rather than the
+                                traditional arbitrary leading lines or
+                                bars.
+                                The instrument is composed of 3
+                                parts:
+                                <br />
+                                <br />
+                                Rhythm as rotation
+                                <br />
+                                <br />
+                                Colour as pitch/timbre
+                                <br />
+                                <br />
+                                Tempo as a hand of a clock
                             </p>
                         </div>
                     </main>

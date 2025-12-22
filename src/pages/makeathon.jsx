@@ -27,7 +27,7 @@ export default function Makeathon() {
 
                             <div className="flex items-center gap-0 -space-x-3 lg:gap-3 lg:space-x-0">
                                 <ProfileTag initials="Me" bgClass="bg-white dark:bg-black" href="https://www.linkedin.com/in/noahhett" />
-                                <ProfileTag initials="LA" bgClass="bg-white dark:bg-black" href="https://www.linkedin.com/in/leila-ali-4409b4282/" />
+                                <ProfileTag initials="LA" bgClass="bg-indigo-300 dark:bg-indigo-600" href="https://leilaali24.myportfolio.com/" />
                             </div>
                         </div>
 
@@ -36,9 +36,9 @@ export default function Makeathon() {
 
                         {/* Skill Tags Row */}
                         <div className="flex flex-wrap gap-2">
-                            <SkillTag text="Branding Design" color="text-blue-700 dark:text-blue-400" />
-                            <SkillTag text="Mechatronics" color="text-black dark:text-white" />
-                            <SkillTag text="C++" color="text-black dark:text-white" />
+                            <SkillTag text="Branding Design" color="text-blue-700 dark:text-[#F2FF00]" />
+                            <SkillTag text="Logo Design" color="text-black dark:text-white" />
+                            <SkillTag text="Publicity" color="text-black dark:text-white" />
                         </div>
                     </div>
 
@@ -50,10 +50,13 @@ export default function Makeathon() {
                         {/* Description Text */}
                         <div className="prose dark:prose-invert max-w-none">
                             <p className="text-sm text-neutral-800 dark:text-neutral-200">
-                                The Gizmophone is an instrument designed to challenge traditional music theory by implementing a rotating face as a primary interaction.
+                                Makeathon is the annual hackathon hosted by Imperial's City and Guilds Union, this branding was created for the 2025 (2nd ever) event
                             </p>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                Instead of using musical bars, we use rhythmic rotations, with colour representing pitch and timbre. Our musical rests and tempo are controlled by the clock hand (or light) which we rotate ourselves.
+                                My main focus for this project was the logo, despite the space exploration theme, the City and Guilds Union wanted a logo that could be adapted and used for future versions of the event.
+                                <br />
+                                <br />
+                                I create a logo from basic geometric shapes, using the overlap to create the A of makeathon. These shapes can then be rearranged to create different forms and reperesentations, for this event, I made general pictures like pencils and spanners as well as space specific images such as a telescope and rocket.
                             </p>
                         </div>
                     </main>

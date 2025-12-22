@@ -7,6 +7,7 @@ import ResponsiveVideo from "../components/responsiveVideo";
 import BuskRadioHero from "../assets/BuskRadioHero.png";
 import BuskRadio3 from "../assets/buskradio3.png";
 import BuskRadio2 from "../assets/buskradio2.png";
+import BuskRadio4 from "../assets/buskradio4.png";
 
 export default function BuskRadio() {
     return (
@@ -26,10 +27,10 @@ export default function BuskRadio() {
 
                             <div className="flex items-center gap-0 -space-x-3 lg:gap-3 lg:space-x-0">
                                 <ProfileTag initials="Me" bgClass="bg-white dark:bg-black" href="https://www.linkedin.com/in/noahhett" />
-                                <ProfileTag initials="TS" bgClass="bg-[#C6E9FF] dark:bg-blue-600" href="https://www.linkedin.com/in/timothy-spawforth-80a992332/" />
-                                <ProfileTag initials="JB" bgClass="bg-[#C6E9FF] dark:bg-blue-600" href="https://www.linkedin.com/in/joseph-birch-546683278/" />
-                                <ProfileTag initials="WP" bgClass="bg-[#C6E9FF] dark:bg-blue-600" href="https://www.linkedin.com/in/wepurcell/" />
-                                <ProfileTag initials="MW" bgClass="bg-[#C6E9FF] dark:bg-blue-600" href="https://www.linkedin.com/in/maxim-wolff-0306a128b/" />
+                                <ProfileTag initials="TS" bgClass="bg-[#80D3E1] dark:bg-blue-600" href="https://www.linkedin.com/in/timothy-spawforth-80a992332/" />
+                                <ProfileTag initials="JB" bgClass="bg-[#FDA6B6] dark:bg-pink-600" href="https://www.linkedin.com/in/joseph-birch-546683278/" />
+                                <ProfileTag initials="WP" bgClass="bg-[#FFE686] dark:bg-yellow-500" href="https://www.linkedin.com/in/wepurcell/" />
+                                <ProfileTag initials="MW" bgClass="bg-[#FDC7A6] dark:bg-orange-600" href="https://www.linkedin.com/in/maxim-wolff-0306a128b/" />
                             </div>
                         </div>
 
@@ -38,9 +39,9 @@ export default function BuskRadio() {
 
                         {/* Skill Tags Row */}
                         <div className="flex flex-wrap gap-2">
-                            <SkillTag text="Interaction Design" color="text-blue-700 dark:text-blue-400" />
-                            <SkillTag text="Electronics" color="text-black dark:text-white" />
-                            <SkillTag text="C++" color="text-black dark:text-white" />
+                            <SkillTag text="UI/UX Design" color="text-[#FC4E6D]" />
+                            <SkillTag text="User Research" color="text-black dark:text-white" />
+                            <SkillTag text="Figma" color="text-black dark:text-white" />
                         </div>
                     </div>
 
@@ -56,10 +57,26 @@ export default function BuskRadio() {
                         {/* Description Text */}
                         <div className="prose dark:prose-invert max-w-none">
                             <p className="text-sm text-neutral-800 dark:text-neutral-200">
-                                The Gizmophone is an instrument designed to challenge traditional music theory by implementing a rotating face as a primary interaction.
+                                Busk Radio is an audio streaming platform allowing audiences to tune in and take a busker's live music with them as they go about their day. This opens up and extends the window of interaction - connecting audiences and performers for longer periods and at any distance.
                             </p>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                Instead of using musical bars, we use rhythmic rotations, with colour representing pitch and timbre. Our musical rests and tempo are controlled by the clock hand (or light) which we rotate ourselves.
+                                For this project we were tasked to innovate on the context of 'Urban Play' with a focus on building communities.
+
+                                Our group decided to investigate the interactions between buskers and their audience - the general public.
+
+                                We found 3 barriers to busker-audience interaction:
+                                <br />
+                                <br />
+                                1. People have places to be and stopping is seen as an interruption to their journey.
+                                <br />
+                                <br />
+                                2. The number of people who carry cash has dropped 75% in a 10 year period. The alternative, card payments aren't as spontaneous and can feel impersonal.
+                                <br />
+                                <br />
+                                3. Gestures of appreciation are awkward, with many people scared to interrupt a performance.
+                                <br />
+                                <br />
+                                With Busk Radio, audiences can enjoy live music on their journey and buskers are supported through digital messages, increased donations and social media exposure via the app.
                             </p>
                         </div>
                     </main>
@@ -87,11 +104,17 @@ export default function BuskRadio() {
                 </aside>
 
                 {/* FULL WIDTH BOTTOM ROW: Image Grid | Order 3 (Desktop) / Order 2 (Mobile) */}
-                <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4 pb-20 order-2 md:order-3">
+                <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4 pb-10 order-2 md:order-3">
                     <img src={BuskRadioHero} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800 object-cover aspect-[297/210]" />
                     <img src={BuskRadio2} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800 object-cover" />
                     <img src={BuskRadio3} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800 object-cover" />
                 </div>
+
+                <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4 pb-20 order-2 md:order-3">
+                    <img src={BuskRadio4} alt="" className="w-full h-auto col-span-2" />
+                    <p className="md:pl-2 text-s text-sm text-neutral-800 dark:text-neutral-200"> My work in this project was focused on the UI design of the Busk Radio app. The main features are the ability to message, 'like' and veiw a buskers customisable avatar.<br /> <br /> However the interface we focussed on most was the 'gamified' payment system, it has skeuomorphic wallet design with flickable coins, cards and receipts.</p>
+                </div>
+
 
                 {/* COPYRIGHT / COPY TEXT SECTION */}
                 <div className="col-span-1 md:col-span-3 pb-64 pt-20 flex flex-col gap-4 text-center order-4">
