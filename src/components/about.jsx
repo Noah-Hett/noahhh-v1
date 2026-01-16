@@ -47,7 +47,7 @@ export default function About({ isDarkMode }) {
       >
         <p className="text-right md:text-center text-base md:text-2xl font-sans font-light px-8 leading-tight">
           Hey, I'm Noah, a <span className="font-bold">London based</span><br />
-          <span className="italic font-light">Design Engineering</span> student<br />
+          <span className="italic font-light">Design Engineering</span><br />
           and visual communication<br />
           obsessive
         </p>
