@@ -20,7 +20,7 @@ export default function About({ isDarkMode }) {
                 </p>
             </div>
 
-            <div className="absolute top-[40vh] left-[6vw] md:left-[10vw] max-w-[50vw] md:max-w-[40vw] flex flex-col gap-6 z-20">
+            <div className="absolute top-[35vh] left-[6vw] md:left-[10vw] max-w-[50vw] md:max-w-[40vw] flex flex-col gap-6 z-20">
                 <div className="flex flex-col gap-1">
                     <p className="font-sans text-base md:text-2xl font-light text-black dark:text-white leading-tight">
                         <ImperialLogo className="inline-block h-[0.65em] w-auto mr-3 mb-1 fill-current" />
@@ -52,10 +52,8 @@ export default function About({ isDarkMode }) {
                 transitionDarkColor="#979797"
             />
 
-            <SkillsMarquee />
-
             {/* New "Grab my" section - Centered and positioned at the bottom */}
-            <div className="absolute top-[100vh] left-1/2 -translate-x-1/2 z-20 inline-flex items-center md:gap-6 gap-4 rounded-full bg-white px-7 py-5 transition-colors dark:bg-neutral-500 whitespace-nowrap">
+            <div className="absolute top-[60vh] left-1/2 -translate-x-1/2 z-20 inline-flex items-center md:gap-6 gap-4 rounded-full bg-white px-7 py-5 transition-colors dark:bg-neutral-500 whitespace-nowrap">
                 <span className="font-geist text-base md:text-2xl font-light text-black dark:text-white">
                     Grab my
                 </span>
@@ -78,6 +76,11 @@ export default function About({ isDarkMode }) {
                     </a>
                 </div>
             </div>
+
+
+            <SkillsMarquee />
+
+
         </section>
     );
 }

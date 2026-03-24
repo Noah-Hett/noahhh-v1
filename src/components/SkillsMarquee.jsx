@@ -14,7 +14,7 @@ const SkillsMarquee = () => {
   ];
 
   return (
-    <div className="absolute left-0 w-full overflow-hidden pointer-events-none top-[75vh]">
+    <div className="absolute left-0 w-full overflow-hidden pointer-events-none top-[80vh]">
       <div className="relative flex gap-4 py-2">
         {/* First set of skills */}
         <div className="flex gap-4 animate-marquee shrink-0 pointer-events-auto">

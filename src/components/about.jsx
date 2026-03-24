@@ -73,7 +73,7 @@ export default function About({ isDarkMode }) {
           />
         </div>
         <p className="text-black dark:text-white font-sans font-light text-base md:text-2xl pl-2">
-          Or check out some<br />featured projects below.
+          Or go click on some<br />of my projects below.
         </p>
       </div>
 

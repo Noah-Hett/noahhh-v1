@@ -14,6 +14,16 @@ export default function Gizmophone() {
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 min-h-screen p-4 md:p-6 gap-4 md:gap-6">
 
                 {/* LEFT CONTENT AREA spanning 2 cols | Order 1 (Desktop) / Order 1 (Mobile) */}
+                <button
+                    onClick={() => window.history.back()}
+                    className="absolute top-6 left-6 flex items-center justify-center w-12 h-12 rounded-full group"
+                >
+                    <div className="absolute inset-0 bg-white dark:bg-neutral-900 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    <span className="relative text-3xl font-light leading-none">
+                        ←
+                    </span>
+                </button>
+
                 <div className="md:col-span-2 pt-20 flex flex-col gap-6 order-1">
 
                     {/* Header Group */}
@@ -80,7 +90,7 @@ export default function Gizmophone() {
                 </div>
 
                 {/* RIGHT COLUMN: PDF Sidebar | Order 2 (Desktop) / Order 3 (Mobile) */}
-                <aside className="md:col-span-1 h-[60vh] md:h-full z-10 order-3 md:order-2 flex flex-col gap-3">
+                <aside className="md:col-span-1 h-[60vh] md:h-full order-3 md:order-2 flex flex-col gap-3">
                     <iframe
                         src="/gizmophonePDF.pdf#toolbar=0&navpanes=0"
                         title="Gizmophone PDF"

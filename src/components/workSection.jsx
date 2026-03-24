@@ -85,7 +85,7 @@ function WorkSection({ columns = 1 }) {
               <div key={i} className="w-1 h-1 bg-current rounded-sm transition-transform duration-300 group-hover:scale-110" />
             ))}
           </div>
-          <span className="text-base md:text-xl ">See All</span>
+          <span className="text-base md:text-xl ">See All Work</span>
         </Link>
       </div>
     </div>

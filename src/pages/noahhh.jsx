@@ -14,6 +14,16 @@ export default function Noahhh() {
         <div className="relative min-h-screen bg-neutral-100 dark:bg-black text-black dark:text-white transition-colors duration-300 overflow-x-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 min-h-screen p-4 md:p-6 gap-4 md:gap-6">
 
+                <button
+                    onClick={() => window.history.back()}
+                    className="absolute top-6 left-6 flex items-center justify-center w-12 h-12 rounded-full group"
+                >
+                    <div className="absolute inset-0 bg-white dark:bg-neutral-900 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    <span className="relative text-3xl font-light leading-none">
+                        ←
+                    </span>
+                </button>
+
                 {/* LEFT CONTENT AREA spanning 2 cols | Order 1 (Desktop) / Order 1 (Mobile) */}
                 <div className="md:col-span-3 pt-20 flex flex-col gap-6 order-1">
 
@@ -83,7 +93,7 @@ export default function Noahhh() {
                 {/* COPYRIGHT / COPY TEXT SECTION */}
                 <div className="col-span-1 md:col-span-3 pb-64 pt-20 flex flex-col gap-4 text-center order-4">
                     <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                        &copy; {new Date().getFullYear()} Noah Hett, Dermot Mooney. All Rights Reserved.
+                        &copy; {new Date().getFullYear()} Noah Hett. All Rights Reserved.
                     </p>
                 </div>
 
