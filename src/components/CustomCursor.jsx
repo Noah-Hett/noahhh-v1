@@ -8,13 +8,8 @@ export function CustomCursor() {
     const [isVisible, setIsVisible] = useState(false);
     const location = useLocation();
 
-    // GSAP quickTo refs for performance
     const xTo = useRef();
     const yTo = useRef();
-    const widthTo = useRef();
-    const heightTo = useRef();
-    const bgTo = useRef();
-    const borderTo = useRef();
 
     // Check for fine pointer (mouse) capability
     useEffect(() => {
@@ -28,28 +23,25 @@ export function CustomCursor() {
         return () => window.removeEventListener('resize', checkPointer);
     }, []);
 
-    // Initialize GSAP quickTo
+    // Initialize GSAP quickTo for position
     useEffect(() => {
-        if (!isVisible || !cursorRef.current || !cursorInnerRef.current) return;
+        if (!isVisible || !cursorRef.current) return;
 
         xTo.current = gsap.quickTo(cursorRef.current, "x", { duration: 0.4, ease: "power3" });
         yTo.current = gsap.quickTo(cursorRef.current, "y", { duration: 0.4, ease: "power3" });
-        
-        // Inner cursor animations
-        widthTo.current = gsap.quickTo(cursorInnerRef.current, "width", { duration: 0.3, ease: "power2.out" });
-        heightTo.current = gsap.quickTo(cursorInnerRef.current, "height", { duration: 0.3, ease: "power2.out" });
-        bgTo.current = gsap.quickTo(cursorInnerRef.current, "backgroundColor", { duration: 0.3, ease: "power2.out" });
-        borderTo.current = gsap.quickTo(cursorInnerRef.current, "borderColor", { duration: 0.3, ease: "power2.out" });
     }, [isVisible]);
 
     // Reset cursor state on route change
     useEffect(() => {
-        if (widthTo.current) {
-            widthTo.current(20);
-            heightTo.current(20);
-            bgTo.current('#ffffff');
-            borderTo.current('#000000');
-        }
+        if (!cursorInnerRef.current) return;
+        gsap.to(cursorInnerRef.current, {
+            width: 20,
+            height: 20,
+            backgroundColor: '#ffffff',
+            borderColor: '#000000',
+            duration: 0.3,
+            ease: "power2.out"
+        });
     }, [location]);
 
     useEffect(() => {
@@ -64,27 +56,35 @@ export function CustomCursor() {
 
         const handleMouseOver = (e) => {
             const target = e.target;
-            if (!target || !target.closest) return;
+            if (!target || !target.closest || !cursorInnerRef.current) return;
 
             const expandElement = target.closest('[data-cursor-expand]');
-            if (expandElement && widthTo.current) {
+            if (expandElement) {
                 const color = expandElement.getAttribute('data-cursor-color') || '#a8e6cf';
-                widthTo.current(55);
-                heightTo.current(55);
-                bgTo.current(color);
-                borderTo.current('#ffffff');
+                gsap.to(cursorInnerRef.current, {
+                    width: 55,
+                    height: 55,
+                    backgroundColor: color,
+                    borderColor: '#ffffff',
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
             }
         };
 
         const handleMouseOut = (e) => {
             const target = e.target;
-            if (!target || !target.closest) return;
+            if (!target || !target.closest || !cursorInnerRef.current) return;
 
-            if (target.closest('[data-cursor-expand]') && widthTo.current) {
-                widthTo.current(20);
-                heightTo.current(20);
-                bgTo.current('#ffffff');
-                borderTo.current('#000000');
+            if (target.closest('[data-cursor-expand]')) {
+                gsap.to(cursorInnerRef.current, {
+                    width: 20,
+                    height: 20,
+                    backgroundColor: '#ffffff',
+                    borderColor: '#000000',
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
             }
         };
 
