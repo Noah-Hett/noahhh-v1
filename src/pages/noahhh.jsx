@@ -5,7 +5,7 @@ import SkillTag from "../components/skillTag";
 import ResponsiveVideo from "../components/responsiveVideo";
 
 import NOAHHH1 from "../assets/noahhhcom1.png";
-import noahhhcomhero from "../assets/noahhhcomHero.png";
+import noahhhcomhero from "../assets/noahhhcomHero.avif";
 import NOAHHH2 from "../assets/noahhhcom2.png";
 
 

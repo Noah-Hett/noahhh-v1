@@ -1,10 +1,10 @@
 import { WorkCard } from "./workcard";
 import { Link } from "react-router-dom";
 
-import BuskHero from "../assets/BuskRadioHero.png";
+import BuskHero from "../assets/BuskRadioHero.avif";
 import GizmophoneHero from "../assets/GizmophoneHero.jpeg";
-import ICRSHero from "../assets/icrsHero.png";
-import noahhhcomHero from "../assets/noahhhcomHero.png";
+import ICRSHero from "../assets/icrsHero.avif";
+import noahhhcomHero from "../assets/noahhhcomHero.avif";
 import DesireBadge from "../assets/desireBadge.svg";
 
 function WorkSection({ columns = 1 }) {
