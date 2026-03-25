@@ -53,6 +53,10 @@ export function WorkCard({
               <img
                 src={badge}
                 alt="Award Badge"
+                width="120"
+                height="120"
+                loading="lazy"
+                decoding="async"
                 className="absolute -top-[5%] -right-[-2%] z-20 md:w-30 md:h-30 w-20 h-20 animate-[spin_15s_linear_infinite]"
               />
             </a>
@@ -68,6 +72,10 @@ export function WorkCard({
               <img
                 src={image}
                 alt={title}
+                width="800"
+                height="400"
+                loading="lazy"
+                decoding="async"
                 className="w-full md:aspect-[2/1] aspect-[4/3] object-cover"
               />
             </a>
@@ -76,6 +84,10 @@ export function WorkCard({
               <img
                 src={image}
                 alt={title}
+                width="800"
+                height="400"
+                loading="lazy"
+                decoding="async"
                 className="w-full md:aspect-[2/1] aspect-[4/3] object-cover"
               />
             </div>

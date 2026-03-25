@@ -5,14 +5,16 @@ import gsap from 'gsap';
 export function CustomCursor() {
     const cursorRef = useRef(null);
     const cursorInnerRef = useRef(null);
-    const [isHovering, setIsHovering] = useState(false);
-    const [hoverColor, setHoverColor] = useState('#a8e6cf');
     const [isVisible, setIsVisible] = useState(false);
     const location = useLocation();
 
     // GSAP quickTo refs for performance
     const xTo = useRef();
     const yTo = useRef();
+    const widthTo = useRef();
+    const heightTo = useRef();
+    const bgTo = useRef();
+    const borderTo = useRef();
 
     // Check for fine pointer (mouse) capability
     useEffect(() => {
@@ -28,15 +30,26 @@ export function CustomCursor() {
 
     // Initialize GSAP quickTo
     useEffect(() => {
-        if (!isVisible || !cursorRef.current) return;
+        if (!isVisible || !cursorRef.current || !cursorInnerRef.current) return;
 
         xTo.current = gsap.quickTo(cursorRef.current, "x", { duration: 0.4, ease: "power3" });
         yTo.current = gsap.quickTo(cursorRef.current, "y", { duration: 0.4, ease: "power3" });
+        
+        // Inner cursor animations
+        widthTo.current = gsap.quickTo(cursorInnerRef.current, "width", { duration: 0.3, ease: "power2.out" });
+        heightTo.current = gsap.quickTo(cursorInnerRef.current, "height", { duration: 0.3, ease: "power2.out" });
+        bgTo.current = gsap.quickTo(cursorInnerRef.current, "backgroundColor", { duration: 0.3, ease: "power2.out" });
+        borderTo.current = gsap.quickTo(cursorInnerRef.current, "borderColor", { duration: 0.3, ease: "power2.out" });
     }, [isVisible]);
 
     // Reset cursor state on route change
     useEffect(() => {
-        setIsHovering(false);
+        if (widthTo.current) {
+            widthTo.current(20);
+            heightTo.current(20);
+            bgTo.current('#ffffff');
+            borderTo.current('#000000');
+        }
     }, [location]);
 
     useEffect(() => {
@@ -54,12 +67,12 @@ export function CustomCursor() {
             if (!target || !target.closest) return;
 
             const expandElement = target.closest('[data-cursor-expand]');
-            if (expandElement) {
-                setIsHovering(true);
-                const color = expandElement.getAttribute('data-cursor-color');
-                if (color) {
-                    setHoverColor(color);
-                }
+            if (expandElement && widthTo.current) {
+                const color = expandElement.getAttribute('data-cursor-color') || '#a8e6cf';
+                widthTo.current(55);
+                heightTo.current(55);
+                bgTo.current(color);
+                borderTo.current('#ffffff');
             }
         };
 
@@ -67,8 +80,11 @@ export function CustomCursor() {
             const target = e.target;
             if (!target || !target.closest) return;
 
-            if (target.closest('[data-cursor-expand]')) {
-                setIsHovering(false);
+            if (target.closest('[data-cursor-expand]') && widthTo.current) {
+                widthTo.current(20);
+                heightTo.current(20);
+                bgTo.current('#ffffff');
+                borderTo.current('#000000');
             }
         };
 
@@ -97,12 +113,12 @@ export function CustomCursor() {
         >
             <div
                 ref={cursorInnerRef}
-                className="relative -translate-x-1/2 -translate-y-1/2 rounded-full border-2 transition-all duration-300 ease-out"
+                className="relative -translate-x-1/2 -translate-y-1/2 rounded-full border-2 will-change-transform"
                 style={{
-                    width: isHovering ? '55px' : '20px',
-                    height: isHovering ? '55px' : '20px',
-                    backgroundColor: isHovering ? hoverColor : '#ffffff',
-                    borderColor: isHovering ? '#ffffff' : '#000000',
+                    width: '20px',
+                    height: '20px',
+                    backgroundColor: '#ffffff',
+                    borderColor: '#000000',
                 }}
             />
         </div>

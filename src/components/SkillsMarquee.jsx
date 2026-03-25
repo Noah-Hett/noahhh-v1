@@ -43,6 +43,7 @@ const SkillsMarquee = () => {
 
         .animate-marquee {
           animation: marquee 30s linear infinite;
+          will-change: transform;
         }
       `}</style>
     </div>
