@@ -90,7 +90,7 @@ export default function Gizmophone() {
                 </div>
 
                 {/* RIGHT COLUMN: PDF Sidebar | Order 2 (Desktop) / Order 3 (Mobile) */}
-                <aside className="md:col-span-1 h-[60vh] md:h-full order-3 md:order-2 flex flex-col gap-3">
+                <aside className="md:col-span-1 h-[60vh] md:h-full z-10 order-3 md:order-2 flex flex-col gap-3">
                     <iframe
                         src="/gizmophonePDF.pdf#toolbar=0&navpanes=0"
                         title="Gizmophone PDF"

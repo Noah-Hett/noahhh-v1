@@ -73,7 +73,7 @@ export default function Makeathon() {
                 </div>
 
                 {/* RIGHT COLUMN: PDF Sidebar | Order 2 (Desktop) / Order 3 (Mobile) */}
-                <aside className="md:col-span-1 h-[60vh] md:h-auto order-3 md:order-2 flex flex-col gap-3">
+                <aside className="md:col-span-1 h-[60vh] md:h-auto z-10 order-3 md:order-2 flex flex-col gap-3">
                     <ResponsiveVideo
                         src="/makeathon.mov"
                         autoPlay={true}

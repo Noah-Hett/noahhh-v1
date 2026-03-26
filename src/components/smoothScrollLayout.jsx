@@ -17,7 +17,7 @@ function SmoothScrollLayout({ children }) {
     const smoother = ScrollSmoother.create({
       wrapper: wrapperRef.current,
       content: contentRef.current,
-      smooth: 1,
+      smooth: 0.75,
       effects: true,
       smoothTouch: 0,
     });
