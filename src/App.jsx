@@ -16,6 +16,10 @@ import Noahhh from "./pages/noahhh";
 import Bisole from "./pages/bisole";
 import Makeathon from "./pages/makeathon";
 import SDE from "./pages/sde";
+import Thermofluids from "./pages/thermofluids";
+import ICHack26 from "./pages/ich26";
+import PDE from "./pages/pde";
+import PanelCalendar from "./pages/panelCalendar";
 
 
 function App() {
@@ -51,6 +55,10 @@ function App() {
                 <Route path="/bisole" element={<Bisole />} />
                 <Route path="/makeathon" element={<Makeathon />} />
                 <Route path="/sde" element={<SDE />} />
+                <Route path="/thermofluids" element={<Thermofluids />} />
+                <Route path="/ich26" element={<ICHack26 />} />
+                <Route path="/pde" element={<PDE />} />
+                <Route path="/panelcalendar" element={<PanelCalendar />} />
               </Routes>
             </main>
           </SmoothScrollLayout>

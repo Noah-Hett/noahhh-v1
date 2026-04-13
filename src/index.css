@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "JunicodeBold";
+  src: url("./assets/Junicode-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
   font-family: "GeneralSans";
@@ -48,6 +55,7 @@
   --font-synemono: "SyneMono", sans-serif;
   --font-londonunderground: "LondonUnderground", sans-serif;
   --font-martiusitalic: "Martius-Italic", sans-serif;
+  --font-junicodebold: "JunicodeBold", sans-serif;
 }
 
 @layer base {

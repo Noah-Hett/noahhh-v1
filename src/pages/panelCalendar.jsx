@@ -1,18 +1,15 @@
 import { Link } from "react-router-dom";
 import ProfileTag from "../components/profileTag";
 import SkillTag from "../components/skillTag";
-import ResponsiveVideo from "../components/responsiveVideo";
 
+import noahhhcomhero from "../assets/noahhhcomHero.avif";
 import GizmophoneHero from "../assets/GizmophoneHero.jpeg";
-import Gizmophone2 from "../assets/gizmophone2.jpeg";
-import Gizmophone3 from "../assets/gizmophone3.jpeg";
 
-export default function Gizmophone() {
+export default function PanelCalendar() {
     return (
         <div className="relative min-h-screen bg-neutral-100 dark:bg-black text-black dark:text-white transition-colors duration-300 overflow-x-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 min-h-screen p-4 md:p-6 gap-4 md:gap-6">
 
-                {/* LEFT CONTENT AREA spanning 2 cols | Order 1 (Desktop) / Order 1 (Mobile) */}
                 <button
                     onClick={() => window.history.back()}
                     className="absolute top-6 left-6 flex items-center justify-center w-12 h-12 rounded-full group"
@@ -23,19 +20,19 @@ export default function Gizmophone() {
                     </span>
                 </button>
 
+                {/* LEFT CONTENT AREA spanning 2 cols | Order 1 (Desktop) / Order 1 (Mobile) */}
                 <div className="md:col-span-2 pt-20 flex flex-col gap-6 order-1">
 
                     {/* Header Group */}
                     <div className="flex flex-col gap-4">
                         {/* Title and Profiles Row */}
                         <div className="flex flex-row items-end justify-between gap-4">
-                            <h1 className="text-5xl md:text-7xl font-synemono leading-none text-left">
-                                GIZMOPHONE
+                            <h1 className="text-5xl md:text-7xl font-bold leading-none text-left">
+                                Panel Calendar
                             </h1>
 
                             <div className="flex items-center gap-0 -space-x-3 lg:gap-3 lg:space-x-0">
                                 <ProfileTag initials="Me" bgClass="bg-white dark:bg-black" href="https://www.linkedin.com/in/noahhett" />
-                                <ProfileTag initials="DM" bgClass="bg-[#C6E9FF] dark:bg-blue-600" href="https://www.linkedin.com/in/dermot-mooney-a1160b323/" />
                             </div>
                         </div>
 
@@ -44,45 +41,30 @@ export default function Gizmophone() {
 
                         {/* Skill Tags Row */}
                         <div className="flex flex-wrap gap-2">
-                            <SkillTag text="Interaction Design" color="text-[#3585FD] dark:text-blue-400" />
-                            <SkillTag text="Mechatronics" color="text-black dark:text-white" />
-                            <SkillTag text="C++" color="text-black dark:text-white" />
+                            <SkillTag text="Web App" color="text-blue-600 dark:text-blue-400" />
+                            <SkillTag text="Task Management" color="text-black dark:text-white" />
+                            <SkillTag text="React" color="text-black dark:text-white" />
                         </div>
                     </div>
 
                     {/* Main Content Body */}
                     <main className="flex flex-col gap-6 mt-4">
-                        {/* Video */}
-                        <ResponsiveVideo
-                            src="/gizmophone.mp4"
-                            autoPlay={true}
-                            loop={false}
-                            muted={false} />
+
+                        {/* Main Image (Video Placeholder) */}
+                        <img 
+                            src={noahhhcomhero} 
+                            alt="Panel Calendar Overview" 
+                            className="w-full h-auto bg-neutral-200 dark:bg-neutral-800 object-cover aspect-video" 
+                        />
 
                         {/* Description Text */}
                         <div className="prose dark:prose-invert max-w-none">
                             <p className="text-sm text-neutral-800 dark:text-neutral-200">
-                                The Gizmophone is an instrument designed to challenge traditional music theory by implementing a rotating face as a primary interaction.
+                                A task management calendar web application currently in development.
                             </p>
+                            <br />
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                                Instead of using musical bars, we use rhythmic rotations, with colour representing pitch and timbre. Our musical rests and tempo are controlled by the clock hand (or light) which we rotate ourselves.
-                                It creates a more fluid musical
-                                experience which relies on visual,
-                                and spacial awareness, as well as
-                                pattern recognition rather than the
-                                traditional arbitrary leading lines or
-                                bars.
-                                The instrument is composed of 3
-                                parts:
-                                <br />
-                                <br />
-                                Rhythm as rotation
-                                <br />
-                                <br />
-                                Colour as pitch/timbre
-                                <br />
-                                <br />
-                                Tempo as a hand of a clock
+                                This application focuses on a unique, highly-styled panel interface to handle daily errands, task blocks, and long-term planning with a fluid, mechanical UI feel. Designed as an ongoing development project to explore functional aesthetics.
                             </p>
                         </div>
                     </main>
@@ -91,13 +73,13 @@ export default function Gizmophone() {
                 {/* RIGHT COLUMN: PDF Sidebar | Order 2 (Desktop) / Order 3 (Mobile) */}
                 <aside className="md:col-span-1 h-[60vh] md:h-full z-10 order-3 md:order-2 flex flex-col gap-3">
                     <iframe
-                        src="/gizmophonePDF.pdf#toolbar=0&navpanes=0"
-                        title="Gizmophone PDF"
+                        src="/buskradio.pdf#toolbar=0&navpanes=0"
+                        title="Panel Calendar PDF Placeholder"
                         className="w-full flex-1 bg-white dark:bg-black border border-neutral-300 dark:border-neutral-800"
                     />
 
                     <a
-                        href="/gizmophonePDF.pdf"
+                        href="/buskradio.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full py-2 flex items-center justify-center gap-2 bg-white dark:bg-black border-2 border-black dark:border-white text-black dark:text-white font-synemono text-xs hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
@@ -110,16 +92,23 @@ export default function Gizmophone() {
                 </aside>
 
                 {/* FULL WIDTH BOTTOM ROW: Image Grid | Order 3 (Desktop) / Order 2 (Mobile) */}
-                <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4 pb-20 order-2 md:order-3">
-                    <img src={GizmophoneHero} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800" />
-                    <img src={Gizmophone2} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800" />
-                    <img src={Gizmophone3} alt="" className="w-full h-auto bg-neutral-200 dark:bg-neutral-800" />
+                <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-4 pb-10 order-2 md:order-3">
+                    <img src={noahhhcomhero} alt="" className="w-full h-[300px] object-cover bg-neutral-200 dark:bg-neutral-800" />
+                    <img src={GizmophoneHero} alt="" className="w-full h-[300px] object-cover bg-neutral-200 dark:bg-neutral-800" />
                 </div>
+
+                <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4 pb-20 order-2 md:order-3">
+                    <img src={noahhhcomhero} alt="" className="w-full h-[300px] object-cover col-span-2 bg-neutral-200 dark:bg-neutral-800" />
+                    <p className="md:pl-2 text-sm text-neutral-800 dark:text-neutral-200">
+                        The interface is designed carefully to balance skeuomorphic elements (like deep inset shadows, overlapping cards, and textured surfaces) with modern utility. More screenshots to be added soon.
+                    </p>
+                </div>
+
 
                 {/* COPYRIGHT / COPY TEXT SECTION */}
                 <div className="col-span-1 md:col-span-3 pb-64 pt-20 flex flex-col gap-4 text-center order-4">
                     <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                        &copy; {new Date().getFullYear()} Noah Hett, Dermot Mooney. All Rights Reserved.
+                        &copy; {new Date().getFullYear()} Noah Hett. All Rights Reserved.
                     </p>
                 </div>
 
@@ -127,4 +116,3 @@ export default function Gizmophone() {
         </div>
     );
 }
-

@@ -4,6 +4,7 @@ import { usePageTransition } from "../animations/circlePageTransition";
 export function WorkCard({
   title,
   titleFont = "font-['Geist:Regular',sans-serif]",
+  titleSize = "md:text-6xl text-4xl",
   image,
   descriptionItalic,
   descriptionRegular,
@@ -28,12 +29,12 @@ export function WorkCard({
         <div className="relative mb-[-5px]">
           {projectUrl ? (
             <a href={projectUrl} onClick={handleClick} className="inline-block">
-              <h2 className={`${titleFont} text-black dark:text-white md:text-6xl text-4xl leading-normal not-italic transition-colors duration-300`}>
+              <h2 className={`${titleFont} text-black dark:text-white ${titleSize} leading-normal not-italic transition-colors duration-300`}>
                 {title}
               </h2>
             </a>
           ) : (
-            <h2 className={`${titleFont} text-black dark:text-white md:text-6xl text-4xl leading-normal not-italic transition-colors duration-300`}>
+            <h2 className={`${titleFont} text-black dark:text-white ${titleSize} leading-normal not-italic transition-colors duration-300`}>
               {title}
             </h2>
           )}

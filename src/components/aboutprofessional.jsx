@@ -53,7 +53,7 @@ export default function About({ isDarkMode }) {
             />
 
             {/* New "Grab my" section - Centered and positioned at the bottom */}
-            <div className="absolute top-[60vh] left-1/2 -translate-x-1/2 z-20 inline-flex items-center md:gap-6 gap-4 rounded-full bg-white px-7 py-5 transition-colors dark:bg-neutral-500 whitespace-nowrap">
+            <div className="absolute top-[65vh] left-1/2 -translate-x-1/2 z-20 inline-flex items-center md:gap-6 gap-4 rounded-full bg-white px-7 py-5 transition-colors dark:bg-neutral-500 whitespace-nowrap">
                 <span className="font-geist text-base md:text-2xl font-light text-black dark:text-white">
                     Grab my
                 </span>

@@ -31,7 +31,7 @@ export default function SDE() {
                         {/* Title and Profiles Row */}
                         <div className="flex flex-row items-end justify-between gap-4">
                             <h1 className="text-5xl md:text-7xl font-bold leading-none text-left">
-                                <span className="font-light"><b>S</b>DE</span>
+                                Airline Seating
                             </h1>
 
                             <div className="flex items-center gap-0 -space-x-3 lg:gap-3 lg:space-x-0">
